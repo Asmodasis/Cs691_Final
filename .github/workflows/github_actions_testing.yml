@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: pwd
+        run: ls
       - name: install coverage
         run: pip install coverage
       - name: Unit Test Coverage
