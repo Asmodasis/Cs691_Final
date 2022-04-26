@@ -17,14 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Unit Test
-        run: python3 ../../unit_test.py
-      - name: Integration Test
-        run: python3 ../../integration_test.py
       - name: Unit Test Coverage
-        run: python3 -m coverage run ../../unit_test.py && python3 -m coverage ../../reportIntegration
+        run: python3 -m coverage run unit_test.py && python3 -m coverage integration_test.py
       - name: Integration Test Coverage
-        run: python3 -m coverage run ../../integration_test.py && python3 -m coverage report ../../integration_test.py
+        run: python3 -m coverage run integration_test.py && python3 -m coverage report integration_test.py
         
     
   
