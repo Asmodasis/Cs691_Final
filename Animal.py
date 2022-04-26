@@ -23,3 +23,4 @@ class Animal:
         else:
             # animal is undefined
             return ("This animal is yet to be discovered!")
+        
