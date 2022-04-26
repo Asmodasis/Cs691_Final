@@ -22,7 +22,7 @@ jobs:
       - name: install coverage
         run: pip install coverage
       - name: Unit Test Coverage
-        run: python3 -m coverage run unit_test.py && python3 -m coverage integration_test.py
+        run: python3 -m coverage run unit_test.py && python3 -m coverage report unit_test.py
       - name: Integration Test Coverage
         run: python3 -m coverage run integration_test.py && python3 -m coverage report integration_test.py
         
