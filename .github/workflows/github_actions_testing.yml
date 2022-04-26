@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: install coverage
+        run: pip install coverage
       - name: Unit Test Coverage
         run: python3 -m coverage run unit_test.py && python3 -m coverage integration_test.py
       - name: Integration Test Coverage
