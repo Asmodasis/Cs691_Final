@@ -26,9 +26,9 @@ jobs:
       - name: Integration Test 
         run: python3 integration_test.py
       - name: Unit Test Coverage
-        run: python3 -m coverage run unit_test.py && python3 -m coverage report unit_test.py
+        run: coverage run unit_test.py && coverage report unit_test.py
       - name: Integration Test Coverage
-        run: python3 -m coverage run integration_test.py && python3 -m coverage report integration_test.py
+        run: coverage run integration_test.py && coverage report integration_test.py
       - name: Checkout 
         uses: actions/checkout@v2
       - name: Login to Docker Hub
